@@ -1,0 +1,19 @@
+#sign-up-container {
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign-up-container h1 {
+    text-align: center;
+}
+
+#sign-up {
+    width:50vw;
+    background: whitesmoke;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px  gray;
+}
