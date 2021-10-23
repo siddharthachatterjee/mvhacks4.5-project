@@ -6,8 +6,36 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+:root {
+  --blue1: rgb(0, 30, 128);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.call-to-action {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 21px;
+  transition: all 1s;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 20px;
+  background: blue;
+  color: white;
+}
+
+
+.call-to-action:hover {
+  border-radius: 5px;
+}
+
+.call-to-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.6
+}
+

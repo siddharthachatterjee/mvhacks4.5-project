@@ -1,0 +1,21 @@
+#home #landing {
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+}
+#home #landing #image {
+    width: 50vw;
+    height: 500px;
+    background-color: #1c1c1c;
+}
+
+#home #landing #image img {
+    width: 100%;
+}
+#home #landing main {
+    padding: 1em;
+    width: 50vw;
+    background-color: rgb(0, 30, 128);
+    height: 500px;
+    color: white;
+}
