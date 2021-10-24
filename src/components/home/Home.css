@@ -22,4 +22,10 @@
     background-color: rgb(0, 30, 128);
     height: 500px;
     color: white;
+    
+}
+
+#home #landing main p {
+    line-height: 2.5em;
+    margin: 30px 0;
 }

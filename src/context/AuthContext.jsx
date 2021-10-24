@@ -8,13 +8,15 @@ export const AuthContext = React.createContext(null);
 
 export function AuthContextProvider(props) {
     const [user, setUser] = useState(null);
+    const [uid, setUid] = useState("");
     useEffect(() => {
         onAuthStateChanged(getAuth(),(authUser) => {
             setUser(authUser);
+            setUid(authUser.uid);
         });
     }, [])
     return (
-        <AuthContext.Provider value = {{user}}>
+        <AuthContext.Provider value = {{user, uid}}>
             {props.children}
         </AuthContext.Provider>
     );
