@@ -5,3 +5,5 @@ Technology used:
   - React + Typescript for frontend
   - Flask + Python for backend
   - Firebase for auth
+
+[Demo Video](https://www.youtube.com/watch?v=0JD0J00PW_c&ab_channel=SiddharthaChatterjee)
