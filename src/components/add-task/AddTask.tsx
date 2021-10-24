@@ -47,6 +47,12 @@ export default function AddTask() {
                 <select className = "input-box" value = {subject} onChange = {e => setSubject(e.target.value)}>
                     <option value = "math"> Math </option>
                     <option value = "english"> English </option>
+                    <option value = "history"> History </option>
+                    <option value = "biology"> Biology </option>
+                    <option value = "chemisty"> Chemistry </option>
+                    <option value = "physics"> Physics </option>
+                    <option value = "computer science"> Computer Science </option>
+                    <option value = "elective"> Elective </option>
                 </select>
                 <br/>
                 <br />
@@ -63,6 +69,9 @@ export default function AddTask() {
                 <br />
                 <button onClick = {add} className = "call-to-action">
                     Add +
+                </button>
+                <button onClick = {() => history.push("/main")} className = "call-to-action" style = {{background:"gray"}}>
+                    Cancel
                 </button>
             </div>
         </div>

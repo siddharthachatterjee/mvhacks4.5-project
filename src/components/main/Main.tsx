@@ -43,11 +43,13 @@ export default function Main() {
         let time = prompt("how long did it take you to complete?") || 30;
         set(ref(getDatabase(), `times/${tasks[i].subject}+${tasks[i].difficulty}`), {
             time
+        }).then(() => {
+
+            set(ref(getDatabase(), `tasks/${auth?.user.uid! || "anonymous"}/${i}`), {
+                ...tasks[i],
+                completed: true
+            }).then(() => window.location.reload());
         })
-        set(ref(getDatabase(), `tasks/${auth?.user.uid! || "anonymous"}/${i}`), {
-            ...tasks[i],
-            completed: true
-        });
     }
 
     
@@ -65,7 +67,7 @@ export default function Main() {
                 {/* {JSON.stringify(tasks)} */}
                 {tasks && tasks.length && tasks.map((task: any, i) => !task.completed && (
                     <div key = {i}>
-                        {task.name} ~{estimations[i] || task.estimation}mins
+                       {task.subject}: {task.name} ~{estimations[i] || task.estimation}mins
                         <button onClick = {() => markAsCompleted(i)}> Mark As Completed </button>
                     </div>
                 ))}
